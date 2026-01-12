@@ -1,0 +1,77 @@
+/* Reset browser default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base page styles */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #ffffff;
+}
+
+/* ========================
+ HEADER 
+======================== */ 
+.site-header {
+    background-color: #3a3a3a;
+    color: white;
+}
+
+/* Header text */
+.site-header h3 {
+    padding: 20px;
+}
+
+/* ========================
+ NAVIGATION 
+======================== */ 
+nav {
+    background-color: #000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* =========================
+ MAIN LAYOUT   
+========================  */
+.site-main {
+    display: flex;
+    min-height: 350px;
+}
+
+/* Main content (left) */
+.content {
+    flex: 3;
+    background-color: #d9d9d9;
+    padding: 20px;
+}
+
+/* Aside content (right) */
+.site-main section:last-child {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+/* ========================
+ FOOTER
+======================== */
+.site-footer {
+    background-color: #3a3a3a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
