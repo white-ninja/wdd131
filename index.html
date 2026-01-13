@@ -3,9 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Emmanuel Ariyo</title>
+    <meta name="description" content="Personal website for WDD 131 - Dynamic Web Fundamentals course by Emmanuel Ariyo.">
+    <meta name="author" content="Emmanuel Ariyo">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <h1>WDD 131 - White-Ninja</h1>
+
+    <header>
+        <h1>WDD 131: Dynamic Web Fundamentals</h1>
+        <p class="subtitle">Personal Course Home Page</p>
+
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#course">Course</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-grid">
+
+        <!-- About Me Card -->
+        <section id="about" class="card">
+            <h2 class="card-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        My name is Emmanuel. I am a software development student enrolled in WDD 131 - Dynamic Web Fundamentals.
+                        I enjoy learning how the web works and building accessible, well-structured websites.
+                        This page serves as my personal course homepage where I organize assignments, projects, and learning resources.
+                    </p>
+
+                    <p class="location">
+                        Lagos, Nigeria
+                    </p>
+                </div>
+
+                <img src="images/profile_picture.jpg" alt="Profile photo of Emmanuel" class="profile-img">
+            </div>
+        </section>
+
+        <!-- Resources Card -->
+        <section id="resources" class="card">
+            <h2>Web Dev & Resources</h2>
+
+            <ul class="resource-list">
+                <li>
+                    <a href="https://developer.mozilla.org" target="_blank" rel="noopener">
+                        MDN Web Docs
+                    </a>
+                </li>
+                <li>
+                    <a href="https://validator.w3.org" target="_blank" rel="noopener">
+                        HTML Validator
+                    </a>
+                </li>
+                <li>
+                    <a href="https://web.dev/learn" target="_blank" rel="noopener">
+                        Web.dev Learning
+                    </a>
+                </li>
+                <li>
+                    <a href="https://css-tricks.com" target="_blank" rel="noopener">
+                        CSS-Tricks
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.w3schools.com" target="_blank" rel="noopener">
+                        W3Schools
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="course">
+            <h2>About the Course</h2>
+            <p>
+                WDD 131 focuses on building dynamic and accessible webpage using
+                HTML, CSS, and JavaScript. The course emphasizes best practices,
+                usability, and clean code structures.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Course Projects</h2>
+            <ul>
+                <li>W01: Course home Page</li>
+                <li>Responsive Layout Project</li>
+                <li>JavaScript Interactive Project</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="year"></span> Emmanuel | WDD 131
+        </p>
+        <p>
+            Last Modified: <span id="lastModified"></span>
+        </p>
+    </footer>
+
 </body>
 </html>
