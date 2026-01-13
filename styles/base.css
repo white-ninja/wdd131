@@ -4,7 +4,8 @@
  }
 
  body {
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     margin: 0;
     background-color: #f4f4f4;
     color: #1a1a1a;
@@ -17,6 +18,10 @@
     color: #ffffff;
     text-align: center;
     padding: 2rem 1rem;
+ }
+
+ #course-title {
+   font-size: 2rem;
  }
 
  .subtitle {
@@ -81,7 +86,7 @@
     color: #ffffff;
     padding: 0.75rem 1rem;
     margin: 0;
-    font-size: 1.1re,;
+    font-size: 1.1rem;
  }
 
  /* ----------About Section------------ */
