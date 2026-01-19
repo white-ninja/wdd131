@@ -1,0 +1,12 @@
+/* Media query for viewport width 500px or greater */
+@media (min-width: 500px) {
+     /* Header changes */
+     header {
+         background-color: #000000;
+         color: #ffffff;
+     }
+    /* Main changes uses CSS Grid with two columns */
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
