@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Page</title>
+    <meta name="description" content="This page provides information about a specific country.">
+    <meta name="author" content="Emmanuel Ariyo">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <img src="images/GB.webp" alt="Great Britain Flag" width="40" height="30">
+        <h1>United Kingdom of Great Britain and Northern Ireland</h1>
+    </header>
+
+    <main class="page-layout">
+
+        <!-- HERO IMAGE -->
+         <section class="hero">
+            <picture>
+                <!-- Large screens -->
+                <source media="(min-width: 900px)" srcset="images/bigben_and_castles_L.webp">
+                <!-- Medium screens -->
+                <source media="(min-width: 500px)" srcset="images/bigben_and_castles_M.webp">
+                <!-- Small screens -->
+                <img src="images/london_skyline.webp" alt="London Skyline">
+            </picture>
+         </section>
+
+         <!-- DATA -->
+            <section class="data">
+                <h2>Country Data <img src="images/GB.webp" alt="Great Britain Flag" width="25" height="15"></h2>
+                <ul>
+                    <li><strong>Official Name:</strong> United Kingdom of Great Britain and Northern Ireland</li>
+                    <li><strong>Area:</strong> 243,610 km²</li>
+                    <li><strong>Population:</strong> 67,736,802</li>
+                    <li><strong>Capital:</strong> London</li>
+                    <li><strong>Official Language:</strong> English</li>
+                    <li><strong>Currency:</strong> Pound Sterling (GBP)</li>
+                    <li><strong>Time Zone:</strong> UTC+0 (GMT) / UTC+1 (BST)</li>
+                    <li><strong>Calling Code:</strong> +44</li>
+                    <li><strong>Internet Top-Level Domain:</strong> .uk</li>
+                    <li><strong>Government:</strong> Constitutional Monarchy</li>
+                    <li><strong>Famous Landmark:</strong> Big Ben</li>
+                </ul>
+            </section>
+
+            <!-- Weather Section -->
+            <section class="weather">
+                <h2>Weather</h2>
+                <img class="weather-icon" src="images/partly_cloudy_day.svg" alt="Weather Icon" width="100" height="100">
+                <p>London has a temperate maritime climate with mild winters and warm summers. The weather can be unpredictable, so it's always a good idea to check the forecast before heading out.</p>
+                <ul>
+                    <li><strong>Temperature:</strong> 15°C (59°F)</li>
+                    <li><strong>Humidity:</strong> 70%</li>
+                    <li><strong>Wind Speed:</strong> 10 km/h (6 mph)</li>
+                    <li><strong>Condition:</strong> Partly Cloudy</li>
+                    <li><strong>Wind Chill:</strong><span id="windChill"></span></li>
+                </ul>
+            </section>
+    </main>
+
+    <!-- Footer Section -->
+     <footer class="site-footer">
+        <p>© <span id="currentYear"></span>Emmanuel Ariyo | Great Britain <img src="images/GB.webp" alt="Great Britain Flag" width="15" height="10"></p>
+        <p>
+            Last Modification: <span id="LastModified"></span>
+        </p>
+     </footer>
+</body>
+</html>

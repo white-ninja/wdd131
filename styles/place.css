@@ -1,0 +1,108 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Open Sans, Playfair Display, Roboto;
+    line-height: 1.5;
+    background-color: #f2fff2;
+    color: #111;
+}
+
+/* HEADER  */
+.site-header {
+    background-color: #c8102e;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.site-header h1 {
+    font-size: 2rem;
+}
+
+/* MAIN LAYOUT (mobile first) */
+.page-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+/* HERO  */
+.hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* DATA + WEATHER SECTION  */
+.data, .weather {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.data h2, .weather h2 {
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.data ul, .weather ul {
+    list-style-type: none;
+}
+
+.data li, .weather li {
+    margin: 0.25rem 0;
+}
+
+.weather-icon {
+    display: block;
+    margin: 0.5rem auto;
+    /* width: 60px; */
+}
+
+/* FOOTER  */
+.site-footer {
+    background-color: #c8102e;
+    color: white;
+    text-align: center;
+    padding: 0.5rem 0;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* ==============================
+WIDE VIEW (matches wireframe)
+==============================  */
+
+@media (min-width: 900px) {
+    .page-layout {
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: start;
+    }
+
+    .hero {
+        grid-column: 2/3;
+    }
+
+    .data {
+        grid-column: 1/2;
+    }
+
+    .weather {
+        grid-column: 3/4;
+    }
+
+    .weather-icon {
+        display: none;
+    }
+
+    .site-footer::after {
+    content: " 🏄‍♂️";
+   }
+}
