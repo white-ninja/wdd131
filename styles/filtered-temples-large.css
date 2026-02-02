@@ -1,0 +1,49 @@
+/* ===============================
+   Large Screen Styles
+   =============================== */
+
+@media (min-width: 768px) {
+
+  /* Header layout */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header h1 {
+    margin: 0;
+    text-align: left;
+  }
+
+  /* Hide hamburger on large screens */
+  #hamburger-btn {
+    display: none;
+  }
+
+  /* Horizontal navigation */
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 0;
+  }
+
+  nav a {
+    padding: 0.5rem 1rem;
+  }
+
+  /* Temple grid expands */
+  .temple-cards {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .temple-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .temple-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  }
+}
