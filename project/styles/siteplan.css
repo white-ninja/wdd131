@@ -1,0 +1,72 @@
+/* <!-- Basic CSS --> */
+        :root {
+            --primary-color: #2E4057;
+            --secondary-color: #F6AE2D;
+            --background-color: #F4F4F4;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header img {
+            width: 80px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 1rem;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif;
+            color: var(--primary-color);
+        }
+
+        section {
+            background: white;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .accent {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        figure {
+            text-align: center;
+        }
+
+        figure img {
+            max-width: 100%;
+            width: 90%;
+            height: auto;
+            border: 2px solid #2E4057;
+            border-radius: 8px;
+        }
+
+        
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+        }
