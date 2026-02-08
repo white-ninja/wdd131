@@ -1,0 +1,155 @@
+body {
+    font-family: 'Roboto', 'Playfair Display', 'Open Sans';
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+header {
+    background-color: #003366;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    max-width: 500px;
+    margin: auto;
+    background: #ddd;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* Required field indicator */
+label[for="product"]::after,
+label[for="installDate"]::after {
+    content: " *";
+    color: red;
+}
+
+legend::after {
+    content: " *";
+    color: red;
+}
+
+select, input, textarea {
+    width: 100%;
+    padding: .6rem;
+    margin-top: .4rem;
+}
+
+fieldset {
+    margin-top: 1rem;
+    border: none;
+}
+
+input[type="submit"] {
+    margin-top: 1.5rem;
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: .8rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0055a5;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* =========================
+   Responsive Mobile Layout
+   ========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        background-color: #f4f4f4;
+    }
+
+    main {
+        width: 95%;
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    label {
+        font-size: 0.95rem;
+    }
+
+    select,
+    input,
+    textarea {
+        font-size: 1rem;
+        padding: 0.7rem;
+    }
+
+    textarea {
+        min-height: 120px;
+    }
+
+    /* Stack rating stars vertically for touch */
+    fieldset legend {
+        margin-bottom: 0.5rem;
+    }
+
+    fieldset label {
+        display: inline-block;
+        margin-right: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    input[type="radio"] {
+        transform: scale(1.2);
+        margin-right: 0.3rem;
+    }
+
+    input[type="checkbox"] {
+        transform: scale(1.2);
+        margin-right: 0.4rem;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 0.9rem;
+    }
+
+    /* Fix alignment: ensure labels and controls are full-width and use border-box */
+    label {
+        display: block;
+        margin-left: 0;
+    }
+
+    select,
+    input[type="date"],
+    input[type="text"],
+    textarea {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.7rem;
+    }
+
+    footer {
+        font-size: 0.85rem;
+        padding: 0.8rem;
+    }
+}
