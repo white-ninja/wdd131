@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Planner | Temple Explorer</title>
+    <meta name="description" content="Use this budget planner to manage your finances while planning visits to temples and heritage sites of The Church of Jesus Christ of Latter-day Saints around the world.">
+    <meta name="author" content="Emmanuel Ariyo">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <div class="container header-flex">
+        <div class="logo">
+            <img src="images/moroni-angel.jpg" alt="Temple & Heritage Logo" loading="lazy" width="50" height="50">
+            <h1>Temple & Heritage Visit Planner</h1>
+        </div>
+
+        <nav>
+            <button id="menu-toggle" aria-label="Toggle Navigation">☰</button>
+            <ul id="primary-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="temples.html">Temples</a></li>
+                <li><a href="planner.html" class="active">Planner</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+            <button id="dark-toggle" aria-label="Toggle Dark Mode">🌙</button>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+  <section class="budget-summary">
+    <h2>Budget Summary</h2>
+    <p>Total Income: $<span id="total-income">0</span></p>
+    <p>Total Expenses: $<span id="total-expense">0</span></p>
+    <p>Balance: $<span id="balance">0</span></p>
+  </section>
+
+  <section class="budget-form">
+    <h2>Add Transaction</h2>
+
+    <label for="description">Description
+      <input type="text" id="description" placeholder="E.g., Flight to Utah" required>
+    </label>
+
+    <label for="amount">Amount
+      <input type="number" id="amount" placeholder="0.00" step="0.01" min="0" required>
+    </label>
+
+    <label for="type">Type
+      <select id="type" required>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+    </label>
+
+    <button id="add-transaction" class="btn-primary">Add Transaction</button>
+  </section>
+
+  <section class="transaction-list">
+    <h2>Transactions</h2>
+    <ul id="transaction-list"></ul>
+  </section>
+
+</main>
+
+<footer>
+    <div class="container footer-flex">
+        <div>
+            <p>&copy; <span id="year"></span> Temple & Heritage Visit Planner. All rights reserved.</p>
+            <p style="font-size: 0.9rem; margin: 0.5rem 0 0 0;">Last Updated: <span id="last-updated"></span></p>
+        </div>
+        <a href="references.html">References</a>
+    </div>
+</footer>
+
+<script src="scripts/main.js"></script>
+<script src="scripts/planner.js"></script>
+
+</body>
+</html>

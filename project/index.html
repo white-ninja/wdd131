@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple & Heritage Visit Planner</title>
+    <meta name="description" content="Plan meaningful visits to temples and heritage sites of The Church of Jesus Christ of Latter-day Saints. Manage your travel budget and explore a global collection.">
+    <meta name="author" content="Emmanuel Ariyo">
+    <meta name="theme-color" content="#2E4057">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <div class="container header-flex">
+        <div class="logo">
+            <img src="images/moroni-angel.jpg" alt="Temple & Heritage Logo" loading="lazy" width="50" height="50">
+            <h1>Temple & Heritage Visit Planner</h1>
+        </div>
+
+        <nav>
+            <button id="menu-toggle" aria-label="Toggle Navigation">☰</button>
+            <ul id="primary-nav">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="temples.html">Temples</a></li>
+                <li><a href="planner.html">Planner</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="references.html">References</a></li>
+                </ul>
+                <button id="dark-toggle" aria-label="Toggle Dark Mode">🌙</button>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO SECTION -->
+    <section class="hero" style="background: linear-gradient(rgba(46, 64, 87, 0.7), rgba(246, 174, 45, 0.7)), url('images/moroni-angel.jpg') center/cover no-repeat; min-height: 500px; display: flex; align-items: center; justify-content: center;">
+        <div class="container hero-content">
+            <h2>Plan Meaningful Visits with Confidence</h2>
+            <p>Discover temples and heritage sites while organizing your travel budget efficiently.</p>
+            <a href="planner.html" class="btn-primary">Start Planning</a>
+        </div>
+    </section>
+
+    <!-- FEATURED TEMPLES -->
+    <section class="featured">
+        <div class="container">
+            <h2>Featured Temples</h2>
+
+            <div id="featured-temples" class="temple-grid">
+                <!-- JS will dynamically insert temple cards here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY PLAN SECTION -->
+    <section class="why-plan">
+        <div class="container">
+            <h2>Why Use Our Visit Planner?</h2>
+
+            <div class="benefits-grid">
+                <article>
+                    <h3>Explore with Purpose</h3>
+                    <p>Access organized information about temples and heritage sites in different regions.</p>
+                </article>
+
+                <article>
+                    <h3>Track Expenses</h3>
+                    <p>Keep your transportation, lodging, and food expenses within your budget.</p>
+                </article>
+
+                <article>
+                    <h3>Stay Organized</h3>
+                    <p>Plan visits efficiently and avoid unexpected travel costs.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container footer-flex">
+        <div>
+            <p>&copy; <span id="year"></span> Temple & Heritage Visit Planner. All rights reserved.</p>
+            <p style="font-size: 0.9rem; margin: 0.5rem 0 0 0;">Last Updated: <span id="last-updated"></span></p>
+        </div>
+        <a href="references.html">References</a>
+    </div>
+</footer>
+
+<script src="scripts/main.js"></script>
+<script src="scripts/temples.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Temple & Heritage Visit Planner</title>
+    <meta name="description" content="Get in touch with us regarding Temple & Heritage Visit Planner or share your temple visiting experiences.">
+    <meta name="author" content="Emmanuel Ariyo">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container header-flex">
+            <div class="logo">
+                <img src="images/moroni-angel.jpg" alt="Temple & Heritage Logo" loading="lazy" width="50" height="50">
+                <h1>Temple & Heritage Visit Planner</h1>
+            </div>
+
+            <nav>
+                <button id="menu-toggle" aria-label="Toggle Navigation">☰</button>
+                <ul id="primary-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="temples.html">Temples</a></li>
+                    <li><a href="planner.html">Planner</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+                <button id="dark-toggle" aria-label="Toggle Dark Mode">🌙</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Contact Us</h2>
+        <p>Have questions about the Temple & Heritage Visit Planner or your temple visits? We'd love to hear from you.</p>
+
+        <form id="contact-form">
+            <label for="name">Name
+                <input type="text" id="name" name="name" required>
+            </label>
+
+            <label for="email">Email
+                <input type="email" id="email" name="email" required>
+            </label>
+
+            <label for="message">Message
+                <textarea id="message" name="message" required rows="6"></textarea>
+            </label>
+
+            <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="container footer-flex">
+            <div>
+                <p>&copy; <span id="year"></span> Temple & Heritage Visit Planner. All rights reserved.</p>
+                <p style="font-size: 0.9rem; margin: 0.5rem 0 0 0;">Last Updated: <span id="last-updated"></span></p>
+            </div>
+            <a href="references.html">References</a>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/contact.js"></script>
+</body>
+</html>

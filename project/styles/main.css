@@ -1,0 +1,783 @@
+/* ===============================
+   ROOT VARIABLES (Design System)
+================================= */
+
+:root {
+    --primary-color: #2E4057;
+    --secondary-color: #F6AE2D;
+    --background-color: #F4F4F4;
+    --white: #ffffff;
+    --text-color: #333;
+    --max-width: 1100px;
+    --transition: all 0.3s ease;
+    --shadow: 0 5px 15px rgba(0,0,0,0.1);
+    --shadow-small: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* ===============================
+   GLOBAL RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: var(--transition);
+}
+
+/* ===============================
+   TYPOGRAPHY
+================================= */
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.25rem; }
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* ===============================
+   CONTAINER
+================================= */
+
+.container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem 0;
+}
+
+/* ===============================
+   HEADER
+================================= */
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 0;
+    box-shadow: var(--shadow-small);
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+header h1 {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* ===============================
+   NAVIGATION
+================================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+}
+
+nav a {
+    color: var(--white);
+    font-weight: 500;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+}
+
+#menu-toggle,
+#dark-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: var(--transition);
+}
+
+#menu-toggle:hover,
+#dark-toggle:hover {
+    color: var(--secondary-color);
+}
+
+/* ===============================
+   HERO SECTION
+================================= */
+
+.hero {
+    background: linear-gradient(rgba(46, 64, 87, 0.75), rgba(46, 64, 87, 0.75)),
+                url("../images/hero.webp") center/cover no-repeat;
+    color: var(--white);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.hero h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===============================
+   BUTTONS
+================================= */
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #e39d1a;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+/* ===============================
+   FEATURED TEMPLES / BENEFITS
+================================= */
+
+.featured,
+.why-plan {
+    padding: 3rem 0;
+}
+
+.why-plan {
+    background-color: var(--white);
+}
+
+/* ===============================
+   GRID LAYOUTS
+================================= */
+
+.temple-grid,
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.benefits-grid article {
+    padding: 2rem;
+    background: var(--background-color);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.benefits-grid article h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* ===============================
+   TEMPLE CARD
+================================= */
+
+.temple-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.temple-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.temple-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.temple-card-content {
+    padding: 1.5rem;
+}
+
+.temple-card-content h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.temple-card-content p {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+/* ===============================
+   FAVORITE BUTTON
+================================= */
+
+.favorite-btn {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.favorite-btn:hover {
+    background-color: #0055aa;
+}
+
+.favorite-btn.active {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* ===============================
+   CONTROLS / FILTERS
+================================= */
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    justify-content: center;
+    background: var(--background-color);
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.controls input,
+.controls select {
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.controls input:focus,
+.controls select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(46, 64, 87, 0.3);
+}
+
+.favorites-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    background: var(--white);
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: var(--transition);
+}
+
+.favorites-toggle:hover {
+    border-color: var(--primary-color);
+}
+
+.favorites-toggle input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+/* ===========================
+   MODAL STYLES
+=========================== */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.modal-content h2 {
+    color: var(--primary-color);
+    margin: 1rem 0;
+}
+
+.modal-content p {
+    text-align: left;
+    margin: 0.75rem 0;
+    line-height: 1.8;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.close-modal:hover {
+    color: var(--secondary-color);
+}
+
+/* ===========================
+   BUDGET PLANNER STYLES
+=========================== */
+
+.budget-summary {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-small);
+}
+
+.budget-summary p {
+    font-weight: 600;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#balance {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.budget-form {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-small);
+}
+
+.budget-form h2 {
+    margin-bottom: 1.5rem;
+}
+
+.budget-form label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.budget-form input,
+.budget-form select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    font-family: inherit;
+}
+
+.budget-form input:focus,
+.budget-form select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Transaction List */
+.transaction-list {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-small);
+}
+
+.transaction-list h2 {
+    margin-bottom: 1.5rem;
+}
+
+.transaction-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.transaction-list li {
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--background-color);
+    cursor: pointer;
+    transition: var(--transition);
+    border-left: 4px solid transparent;
+}
+
+.transaction-list li:hover {
+    background: #f0f0f0;
+    transform: translateX(5px);
+}
+
+.transaction-list li.income {
+    border-left-color: #4CAF50;
+}
+
+.transaction-list li.expense {
+    border-left-color: #f44336;
+}
+
+.transaction-list li span:first-child {
+    font-weight: 500;
+}
+
+.transaction-list li span:last-child {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.transaction-list li.income span:last-child {
+    color: #4CAF50;
+}
+
+.transaction-list li.expense span:last-child {
+    color: #f44336;
+}
+
+/* ===========================
+   CONTACT FORM
+=========================== */
+
+#contact-form {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: var(--shadow-small);
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    margin-top: 0.5rem;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(46, 64, 87, 0.3);
+}
+
+#contact-form button {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* ===============================
+   FOOTER
+================================= */
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: var(--secondary-color);
+}
+
+footer a:hover {
+    color: var(--white);
+}
+
+/* ===============================
+   DARK MODE
+================================= */
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #111;
+}
+
+body.dark-mode .temple-card,
+body.dark-mode .modal-content,
+body.dark-mode .budget-summary,
+body.dark-mode .budget-form,
+body.dark-mode .transaction-list,
+body.dark-mode #contact-form,
+body.dark-mode .controls {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+body.dark-mode .controls input,
+body.dark-mode .controls select,
+body.dark-mode .budget-form input,
+body.dark-mode .budget-form select,
+body.dark-mode #contact-form input,
+body.dark-mode #contact-form textarea,
+body.dark-mode .transaction-list li {
+    background-color: #3a3a3a;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #f0f0f0;
+}
+
+body.dark-mode a {
+    color: var(--secondary-color);
+}
+
+body.dark-mode .benefits-grid article {
+    background-color: #2a2a2a;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 768px) {
+
+    .header-flex {
+        gap: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        padding: 1rem;
+        gap: 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .controls input,
+    .controls select {
+        width: 100%;
+    }
+
+    .temple-grid,
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 1rem;
+    }
+
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.3rem; }
+    h3 { font-size: 1.1rem; }
+
+    .hero {
+        padding: 3rem 0;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .modal-content {
+        padding: 1.5rem;
+        width: 95%;
+    }
+
+    #contact-form {
+        padding: 1.5rem;
+    }
+
+}
